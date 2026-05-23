@@ -1,4 +1,11 @@
 from typing import Tuple, Dict
+import dotenv
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+EXCHANGERATE-API-KEY = os.getenv('EXCHANGERATE-API-KEY')
+
 
 def get_exchange_rate(base: str, target: str, amount: str) -> Tuple:
     """Return a tuple of (base, target, amount, conversion_result (2 decimal places))"""
